@@ -2,7 +2,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: "Montserrat", serif;
+  /* font-family: "Montserrat", serif; */
 }
 
 body {
@@ -37,11 +37,11 @@ a {
 }
 
 .info {
-  display: inline-block;
   display: flex;
+  justify-content: space-between;
   gap: 76px;
   padding: 12px 135px;
-  background-color: #a96644;
+  background-color: #F7EBE5;
 }
 
 .info ul {
@@ -49,14 +49,14 @@ a {
   align-items: center;
 }
 
-.info-item {
-  display: inline-block;
+.info-items {
+  display: flex;
+  gap: 14px;
 }
 
 .info-item a {
-  margin-left: 14px;
+  display: flex;
   gap: 14px;
-  /* font-family: Proxima Nova; */
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
@@ -93,12 +93,13 @@ a {
   padding: 2px 5px;
 }
 
-.social-icon {
-  display: inline-block;
+.social-icons {
+  display: flex;
+  gap: 10px;
 }
 
 .bx {
-  width: 24px;
+  font-size: 24px;
   color: #000000;
 }
 
@@ -110,6 +111,8 @@ a {
 }
 
 .navigation-link {
+  display: flex;
+  align-items: center;
   font-family: Proxima Nova;
   font-size: 14px;
   font-weight: 400;
@@ -131,7 +134,11 @@ a {
 }
 
 .pages {
-  display: block;
+  /* display: block; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
   margin: 0 auto;
   padding-top: 34px;
   margin-bottom: 36px;
@@ -259,22 +266,67 @@ td:nth-child(2) {
 .info-text-items {
   display: flex;
   gap: 30px;
+  position: relative;
+
+}
+
+.info-text-item-link {
+  position: relative;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #292929;
+  cursor: pointer;
+}
+
+.info-text-item-link::before {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 4px;
+  background-color: #E7426A;
+  bottom: -21px;
+  transition: all .2s;
+}
+
+.info-text-item-link:hover::before {
+  width: 100%;
 }
 
 .line {
   display: block;
-  border: 1px solid #3636d2;
+  border: 1px solid #EDEDF0;
   width: 100%;
   margin-top: 18px;
+  margin-bottom: 40px;
 }
 
-.info-text-items li:hover {
-  text-decoration: underline;
+.info-text-box p {
+  font-family: Proxima Nova;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .sale-off {
+  position: relative;
   margin: 0 auto;
   width: 1170px;
+}
+
+.arrow-link-left {
+  position: absolute;
+  left: -25px;
+  top: 30%;
+  cursor: pointer;
+}
+
+.arrow-link-right {
+  position: absolute;
+  right: -35px;
+  top: 30%;
+  cursor: pointer;
 }
 
 .sale-off h2 {
@@ -294,7 +346,20 @@ td:nth-child(2) {
   border-radius: 5px;
   background-color: #FFF;
   border: 1px solid #EDEDF0;
+}
 
+.img-container {
+  overflow: hidden;
+}
+
+.img-container img {
+  width: 271px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.img-container:hover img {
+  transform: scale(1.2);
 }
 
 .sale-off-item h4 {
@@ -319,7 +384,7 @@ td:nth-child(2) {
 }
 
 .price-line span {
-  flex-basis: 48%;
+  flex-basis: 50%;
   padding: 13px 50px 13px 14px;
   color: #E7426A;
   font-size: 18px;
@@ -374,6 +439,8 @@ td:nth-child(2) {
 .footer-info {
   padding: 60px 135px;
   display: flex;
+  justify-content: space-between;
+  position: relative;
 }
 
 .footer-logos ul {
@@ -403,4 +470,28 @@ td:nth-child(2) {
   font-weight: 400;
   line-height: 17px;
   color: #292929;
+}
+
+.contact {
+  text-align: right;
+}
+
+.social {
+  display: flex;
+  position: absolute;
+  right: 50px;
+  bottom: 36px;
+  transform: translate(-50%, -50%);
+  gap: 18px;
+}
+.social i {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.adress {
+  width: 370px;
+  position: absolute;
+  left: 135px;
+  bottom: 26px;
 }
